@@ -22,11 +22,5 @@ services:
       interval: 5s
       retries: 20
 
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    command: tunnel --no-autoupdate --url http://app:80
-    depends_on:
-      - app
-
 volumes:
   dbdata:
